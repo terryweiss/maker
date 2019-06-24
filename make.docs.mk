@@ -2,9 +2,8 @@
 .DEFAULT_GOAL :=
 .DEFAULT_GOAL := help
 
-MAKEFILE-DOCS.DESCRIPTION:=##@make-docs-mk: Document generation engine for `makefile` recipes and variables
-
-
+Description.MAKEFILE-DOCS.:=##@make-docs-mk: Document generation engine for `makefile` recipes and variables
+Introduction:=##@README These are a series of makefile snippets, useful for different kinds of projects
 
 HELP-DEFINITION  := $(shell tput setaf 15)
 HELP-CATEGORY  := $(shell tput setaf 13)
@@ -45,7 +44,7 @@ help:##@make-docs-mk Show this help.
     print "\n"; }
 
 help-to-md: ##@make-docs-mk Create a markdown file of the makefile help
-	$(PERL) -e '$(HELP_RENDER_MD)' $(MAKEFILE_LIST) 
+	@$(PERL) -e '$(HELP_RENDER_MD)' $(MAKEFILE_LIST) 
 
 
 

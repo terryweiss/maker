@@ -1,8 +1,9 @@
-TS-MK.DESCRIPTION:=##@ts-mk Recipes for compiling typescript 
+Description.TS-MK:=##@ts-mk Recipes for compiling typescript 
 
 SOURCE-TS-FILES := $(shell ${FIND} ${SRC-DIR}/ -type f -name "**.ts")
 SOURCE-TS-FILES-OUT = $(SOURCE-TS-FILES:.ts=.js)
 SOURCE-TS-FILES-OUT := $(subst ${SRC-DIR}/,${OUT-DIR}/,${SOURCE-TS-FILES-OUT})
+
 TS-OUT := ${OUT-DIR}/%.js
 TS-IN := ${SRC-DIR}/%.ts
 

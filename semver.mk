@@ -1,5 +1,5 @@
 
-SEMVER-MK.DESCRIPTION:=##@semver-mk This file contains some helpers for defining the semantic version of your project. Since we include the build type in the version, this also defines the BUILD-TYPE variable
+Description.SEMVER-MK:=##@semver-mk This file contains some helpers for defining the semantic version of your project. Since we include the build type in the version, this also defines the BUILD-TYPE variable
 
 PUSH-ON-VERSION:=false##@semver-m When true, the repo will be automatically pushed on version increment
 

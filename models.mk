@@ -1,4 +1,4 @@
-MODELS-MK.DESCRIPTION:=##@models-mk Tools for converting json-schema to typescript models
+Description.MODELS-MK:=##@models-mk Tools for converting json-schema to typescript models
 
 MODEL-SRC-DIR ?= models##@models-mk The directory where to find the json-schema definitions
 MODEL-OUT-DIR ?= ${SRC-DIR}/models##@models-mk The directory where you want to write the output

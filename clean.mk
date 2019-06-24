@@ -1,5 +1,5 @@
 
-CLEAN-MK.DESCRIPTION:=##@clean-mk Recipes for cleaning up after yourself
+Description.CLEAN-MK:=##@clean-mk Recipes for cleaning up after yourself
 
 clean:##@clean-mk Clean up the out dir by deleting everything in it
 	${call show-msg,Cleaning ${OUT-DIR}}

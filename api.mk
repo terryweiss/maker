@@ -1,4 +1,4 @@
-API-MK.DESCRIPTION:=##@api-mk When you have a swagger file, you may want to make it available from the API so that others can create clients based on the definition
+Description.API-MK:=##@api-mk When you have a swagger file, you may want to make it available from the API so that others can create clients based on the definition
 
 SWAGGER-FILE ?= api.json##@api-mk This is the name of your api file. It can be JSON or YAML, but really the makefile won't care 
 SWAGGER-OUT-DIR ?= ${OUT-DIR}/public##@api-mk The directoory where you will be serving static assets

@@ -7,7 +7,7 @@ SHOW-MSG-COLOR=tput setaf 12
 START-MSG-COLOR=tput setaf 141
 END-MSG-COLOR=tput setaf 147
 
-print-var-%: ; @echo $* = $($*) ##@GlobalCommands This is a debugging tool. It allows you to see the value of any variable in the makefile by appending it to this like so: make print-var-HSCONFIG
+print-var-%: ; @echo $* = $($*) ##@info-mk This is a debugging tool. It allows you to see the value of any variable in the makefile by appending it to this like so: make print-var-HSCONFIG
 
 # Call this function to the user that you are about to do something
 define start-msg
