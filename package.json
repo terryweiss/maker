@@ -1,11 +1,14 @@
 {
   "name": "@concorde2k/core.makes",
-  "version": "1.0.0",
+  "version": "1.0.1-dev.0",
   "description": "Makefile snippets",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Concorde, Inc",
-  "license": "NONE"
+  "license": "NONE",
+  "dependencies": {
+    "semver": "^6.1.2"
+  }
 }
