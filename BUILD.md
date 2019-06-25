@@ -1,11 +1,6 @@
+make[1]: Entering directory '/mnt/e/workspace/makes'
 # Building
 This project is built using [GNU make](https://www.gnu.org/software/make/manual/html_node/index.html). Get it from the usual channels. The `makefile` included here provides the following verbs:
-## File: README:
-
-| Var/Verb | Description  |
-|---|---|
-| Introduction | These are a series of makefile snippets, useful for different kinds of projects
-
 ## File: api-mk:
 
 | Var/Verb | Description  |
@@ -135,7 +130,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 |---|---|
 | Description | This file contains some helpers for defining the semantic version of your project. Since we include the build type in the version, this also defines the BUILD-TYPE variable
 | PUSH-ON-VERSION | When true, the repo will be automatically pushed on version increment
-| define | Call this function to create the CURRENT-VERSION variable which will contain the current instance from package.json
+| define | Call this function to create the CURRENT-VERSION variable which will contain the current instance version from package.json
 | version-up | This is the recipe to up the version number. Set the variables as necessary and run this.
 
 ## File: static-mk:
@@ -157,3 +152,11 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | watch | Wtahc the directory defined in the tsconfig.json file
 | Description | Recipes for compiling javascript via babel
 
+## File: tsdocs-mk:
+
+| Var/Verb | Description  |
+|---|---|
+| Description | Recipes for creating ts technical docs
+| TYPEDOC-CONFIG-FILE | The typedocs config file
+
+make[1]: Leaving directory '/mnt/e/workspace/makes'
