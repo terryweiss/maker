@@ -1,6 +1,5 @@
 APPS-MK.DESCRIPTION:=##@apps-mk These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
 
-BUILD_TYPE ?= dev##@apps-mk dev, prod, or stage. 
 FIND ?= /usr/bin/find##@apps-mk Be careful with this one if you are in windows. It expects linux `find` not CMD `find` and you may need to update the path to your local cygwin instance
 NPM ?= npm##@apps-mk NPM executable
 RM ?= rm##@apps-mk The delete command
@@ -18,6 +17,7 @@ SCP ?= scp##@apps-mk Secure Copy over ssh
 SSH ?= ssh##@apps-mk ssh. 'nuff said
 SED ?= sed##@apps-mk sed - mostly used when applying the current version to the docker-compose remotely
 BABEL ?= babel##@apps-mk Bable for compiling ES(X) code to JS
+TSDOCS ?= node_modules/.bin/typedoc ##@apps-mk The path to the typedoc executable
 
 REPORT-TIME ?= false##@apps-mk When running some compilations, the system will call the `time` program when running to see what is going on. This must be `true` for that to happen
 

@@ -1,4 +1,4 @@
-
+.PHONY: build-container publish-container deploy-dc
 Description.DOCKER-MK:=##@docker-mk Recipes for dealing with docker containers and publications
 
 DOCKER-REGISTRY-URL ?= registry.concorde2000.com:5000##@docker-mk This is the name of the docker repository to publish containers to

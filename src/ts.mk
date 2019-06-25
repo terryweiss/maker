@@ -1,3 +1,5 @@
+.PHONY: watch
+
 Description.TS-MK:=##@ts-mk Recipes for compiling typescript
 
 SOURCE-TS-FILES := $(shell ${FIND} ${SRC-DIR}/ -type f -name "**.ts")

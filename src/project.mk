@@ -36,8 +36,11 @@ ${PACKAGEJSON-OUT}: ${PACKAGEJSON-FILE}
 	${call show-msg,Copying ${PACKAGEJSON-FILE} => ${OUT-DIR}/${PACKAGEJSON-FILE}}
 	@${COPY} ${PACKAGEJSON-FILE} ${OUT-DIR}/${PACKAGEJSON-FILE}
 
-
 ${README-FILE-OUT}: ${README-FILE}
 	${call show-msg,Copying ${README-FILE} => ${OUT-DIR}/${README-FILE}}
 	@${COPY} ${README-FILE} ${OUT-DIR}/${README-FILE}
+
+install-dev-env:##@project-mk Installs the development environment for you
+	npm install --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
+	
 

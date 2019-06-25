@@ -1,3 +1,4 @@
+.PHONY: build publish
 
 STATIC-IN-DIR:=src
 STATIC-OUT-DIR:=dist
