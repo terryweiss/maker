@@ -4,7 +4,7 @@ Description.SEMVER-MK:=##@semver-mk This file contains some helpers for defining
 
 PUSH-ON-VERSION:=false##@semver-mk When true, the repo will be automatically pushed on version increment
 
-define LoadCurrentVersion##@semver-mk Call this function to create the CURRENT-VERSION variable which will contain the current instance from package.json
+define LoadCurrentVersion##@semver-mk Call this function to create the CURRENT-VERSION variable which will contain the current instance version from package.json
 $(eval CURRENT-VERSION=$(shell node -p "require('./${PACKAGEJSON-FILE}').version"))
 endef
 

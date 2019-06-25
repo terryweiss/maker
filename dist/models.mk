@@ -1,3 +1,5 @@
+.PHONY: build-ts
+
 Description.MODELS-MK:=##@models-mk Tools for converting json-schema to typescript models
 
 MODEL-SRC-DIR ?= models##@models-mk The directory where to find the json-schema definitions
