@@ -27,6 +27,7 @@ README-FILE-OUT = ${OUT-DIR}/${README-FILE}##@project-mk The build target for th
 ${LIB}: ${PACKAGEJSON-FILE}
 	${call start-msg,Installing depenedencies}
 	@${TIME} ${NPM} install
+	${call show-msg,Applying NPM audit}
 	@${TIME} ${NPM} audit fix
 	@${TOUCH} -m ${LIB}
 	${call end-msg,Installing depenedencies}
@@ -39,4 +40,4 @@ ${PACKAGEJSON-OUT}: ${PACKAGEJSON-FILE}
 ${README-FILE-OUT}: ${README-FILE}
 	${call show-msg,Copying ${README-FILE} => ${OUT-DIR}/${README-FILE}}
 	@${COPY} ${README-FILE} ${OUT-DIR}/${README-FILE}
-	
+
