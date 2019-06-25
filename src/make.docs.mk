@@ -49,6 +49,6 @@ help:##@make-docs-mk Show this help.
 help-to-md: ##@make-docs-mk Create a markdown file of the makefile help
 	@$(PERL) -e '$(HELP_RENDER_MD)' $(MAKEFILE_LIST) 
 
-${BUILD-DESCRIPTION}:
+./${BUILD-DESCRIPTION}:
 	${MAKE} help-to-md > ${BUILD-DESCRIPTION}
 

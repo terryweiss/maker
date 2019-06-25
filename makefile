@@ -15,7 +15,7 @@ include ${LIBDIR}/static.mk
 include ${LIBDIR}/tsdocs.mk
 
 
-build: ${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT} 
+build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT} 
 	${call LoadCurrentVersion}
 	git add .
 	git commit -m "build ${CURRENT-VERSION}"
