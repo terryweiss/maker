@@ -7,9 +7,11 @@ MD-DOCS-DIR ?= ${DOCS-OUT}/md##@tsdocs-mk The directory where to place markdown 
 
 ${DOCS-OUT}: ${SOURCE-TS-FILES} makefile ${README-FILE} ${PACKAGEJSON-FILE} ${TYPEDOC-CONFIG-FILE}
 ifneq (HTML-DOCS-DIR,)
-	@${TIME} ${TSDOCS} --out ${DOCS-OUT}/html --options ${TYPEDOC-CONFIG-FILE} --includes ./  ${SRC-DIR}
+	@${TIME} ${TSDOCS} --out ${HTML-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --includes ./  ${SRC-DIR}
 endif
 ifneq (MD-DOCS-DIR,)
-	@${TIME} ${TSDOCS} --out ${DOCS-OUT}/md --options ${TYPEDOC-CONFIG-FILE} --theme markdown --mdEngine gitbook --includes ./ ${SRC-DIR}
+	@${TIME} ${TSDOCS} --out ${MD-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --theme markdown --mdEngine gitbook --includes ./ ${SRC-DIR}
 endif
 	@${TOUCH} -m ${DOCS-OUT}
+	@${TOUCH} -m ${MD-DOCS-DIR}
+	@${TOUCH} -m ${HTML-DOCS-DIR}
