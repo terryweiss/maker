@@ -25,12 +25,12 @@ README-FILE ?= README.md##@project-mk The name of your readme file
 README-FILE-OUT = ${OUT-DIR}/${README-FILE}##@project-mk The build target for the readme file. Use this var to specify your build depdency
 
 ${LIB}: ${PACKAGEJSON-FILE}
-	${call start-msg,Installing depenedencies}
+	${call start-msg,Installing dependencies}
 	@${TIME} ${NPM} install
 	${call show-msg,Applying NPM audit}
 	@${TIME} ${NPM} audit fix
 	@${TOUCH} -m ${LIB}
-	${call end-msg,Installing depenedencies}
+	${call end-msg,Installing dependencies}
 
 ${PACKAGEJSON-OUT}: ${PACKAGEJSON-FILE}
 	${call show-msg,Copying ${PACKAGEJSON-FILE} => ${OUT-DIR}/${PACKAGEJSON-FILE}}
@@ -42,5 +42,5 @@ ${README-FILE-OUT}: ${README-FILE}
 
 install-dev-env:##@project-mk Installs the development environment for you
 	npm install --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
-	
+
 
