@@ -14,7 +14,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 
 | Var/Verb | Description  |
 |---|---|
-| APPS-MK | These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
+| Description | These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
 | FIND | Be careful with this one if you are in windows. It expects linux `find` not CMD `find` and you may need to update the path to your local cygwin instance
 | NPM | NPM executable
 | RM | The delete command
@@ -81,6 +81,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 
 | Var/Verb | Description  |
 |---|---|
+| Description | Recipes for compiling javascript via babel
 | JS-OUT | Add this to your build dependencies
 
 ## File: make-docs-mk:
@@ -150,7 +151,6 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | BUILD-TS | Use this to define a build dependency
 | TS-DECLARE | When true, a declaration file will be generated for each module
 | watch | Wtahc the directory defined in the tsconfig.json file
-| Description | Recipes for compiling javascript via babel
 
 ## File: tsdocs-mk:
 
@@ -158,5 +158,8 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 |---|---|
 | Description | Recipes for creating ts technical docs
 | TYPEDOC-CONFIG-FILE | The typedocs config file
+| DOCS-OUT | The directory where the docs will be generated. This is the build dependency
+| HTML-DOCS-DIR | The directory where to place HTML documentation. If blank, it will not be generated
+| MD-DOCS-DIR | The directory where to place markdown documentation. If blank, it will not be generated
 
 make[1]: Leaving directory '/mnt/e/workspace/makes'
