@@ -1,4 +1,4 @@
-.PHONY: build publish
+.PHONY: build publish release
 
 STATIC-IN-DIR:=src
 STATIC-OUT-DIR:=dist
@@ -21,3 +21,6 @@ build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}
 	@-${GIT} commit -m "Built ${CURRENT-VERSION}"
 
 publish: publish-npm
+
+
+release: build publish

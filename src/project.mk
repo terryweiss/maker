@@ -47,4 +47,5 @@ install-dev-env:##@project-mk Installs the development environment for you
 	@${TIME} ${NPM} audit fix
 
 fix-line-endings:
+	$(call show-msg,Fixing line endings)
 	$(foreach this,${ALL-PROJECT-FILES},$(shell sed -i 's/\r//g' ${this}) )
