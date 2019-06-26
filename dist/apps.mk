@@ -1,4 +1,4 @@
-APPS-MK.DESCRIPTION:=##@apps-mk These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
+Description.APP-MK:=##@apps-mk These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
 
 FIND ?= /usr/bin/find##@apps-mk Be careful with this one if you are in windows. It expects linux `find` not CMD `find` and you may need to update the path to your local cygwin instance
 NPM ?= npm##@apps-mk NPM executable
