@@ -18,6 +18,6 @@ include ${LIBDIR}/tsdocs.mk
 build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}
 	${call LoadCurrentVersion}
 	@-${GIT} add .
-	@-{GIT} commit -m "Built ${CURRENT-VERSION}"
+	@-${GIT} commit -m "Built ${CURRENT-VERSION}"
 
 publish: publish-npm
