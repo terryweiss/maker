@@ -23,4 +23,4 @@ build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}
 publish: publish-npm
 
 
-release: build publish
+release: version-up clean build publish
