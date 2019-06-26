@@ -20,7 +20,7 @@ version-up:##@semver-mk This is the recipe to up the version number. Set the var
 	@${GIT} add .
 	@-${GIT} commit -a -m "Creating version ${NEW_VERSION}"
 	$(call show-msg,Tagging repository with ${NEW_VERSION})
-	@${GIT} tag -a "v${NEW_VERSION}" -m "v${NEW_VERSION}"
+	@-${GIT} tag -a "v${NEW_VERSION}" -m "v${NEW_VERSION}"
 ifeq (${PUSH-ON-VERSION},true)
 	$(call show-msg,Pushing to git origin)
 	@${GIT} push
