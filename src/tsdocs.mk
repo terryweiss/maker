@@ -5,7 +5,7 @@ DOCS-OUT ?= docs##@tsdocs-mk The directory where the docs will be generated. Thi
 HTML-DOCS-DIR ?= ${DOCS-OUT}/html##@tsdocs-mk The directory where to place HTML documentation. If blank, it will not be generated
 MD-DOCS-DIR ?= ${DOCS-OUT}/md##@tsdocs-mk The directory where to place markdown documentation. If blank, it will not be generated
 
-${DOCS-OUT}: ${SOURCE-TS-FILES} makefile ${README-FILE} ${PACKAGEJSON-FILE} ${TYPEDOC-CONFIG-FILE}
+${DOCS-OUT}: ${SOURCE-TS-FILES} makefile ${README-FILE} ${PACKAGEJSON-FILE} ${TYPEDOC-CONFIG-FILE} ${BUILD-DESCRIPTION}
 ifneq (HTML-DOCS-DIR,)
 	@${TIME} ${TSDOCS} --out ${HTML-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --includes ./  ${SRC-DIR}
 endif

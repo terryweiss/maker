@@ -1,3 +1,4 @@
+.PHONY: fix-line-endings install-dev-env
 Description.PROJECT-MK:=##@project-mk Tools for working with package.json and other meta information around the project directory
 
 OUT-DIR ?= dist##@project-mk The output directory for the build
@@ -23,6 +24,7 @@ LIB ?= node_modules##@project-mk The location of the node_modules directory. Use
 PACKAGEJSON-OUT = ${OUT-DIR}/${PACKAGEJSON-FILE}##@project-mk The build target for package.json. Use this var to specify your build depdency
 README-FILE ?= README.md##@project-mk The name of your readme file
 README-FILE-OUT = ${OUT-DIR}/${README-FILE}##@project-mk The build target for the readme file. Use this var to specify your build depdency
+ALL-PROJECT-FILES = $(shell find . -not \( -path ./node_modules -prune \) -not \( -path ./docs -prune \) -not \( -path ./.idea -prune \) -not \( -path ./.git -prune \) -type f -name "*")
 
 ${LIB}: ${PACKAGEJSON-FILE}
 	${call start-msg,Installing dependencies}
@@ -44,3 +46,5 @@ install-dev-env:##@project-mk Installs the development environment for you
 	@${TIME} ${NPM} install --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
 	@${TIME} ${NPM} audit fix
 
+fix-line-endings:
+	$(foreach this,${ALL-PROJECT-FILES},$(shell sed -i 's/\r//g' ${this}) )

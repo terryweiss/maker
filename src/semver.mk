@@ -8,7 +8,7 @@ define LoadCurrentVersion##@semver-mk Call this function to create the CURRENT-V
 $(eval CURRENT-VERSION=$(shell node -p "require('./${PACKAGEJSON-FILE}').version"))
 endef
 
-version-up:##@semver-mk This is the recipe to up the version number. Set the variables as necessary and run this.
+version-up:fix-line-endings ##@semver-mk This is the recipe to up the version number. Set the variables as necessary and run this.
 	$(call start-msg,Updating version number)
 	$(eval NEW_VERSION=$(shell node -p "let v = require('./${PACKAGEJSON-FILE}'); \
 		v.version = require('semver').inc(v.version, '${VERSION-TYPE}', '${VERSION-SUFFIX}'); \
