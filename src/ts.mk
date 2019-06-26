@@ -15,10 +15,10 @@ TS-DECLARE?=false##@ts-mk When true, a declaration file will be generated for ea
 ${TS-OUT}: ${TS-IN}
 	${call show-msg,Compiling $< => $@}
 	@${MKDIRP} $(@D)
-	@${TIME} ${TSC} --target es2015 --lib 'ES2015' --module 'commonjs' --sourceMap --outDir $(@D) $<
+	@${TIME} ${TSC} --target es2015 --lib 'ES2015' --lib 'ES6' --lib 'ES2016' --lib 'ES2017' --lib 'ES2018' --module 'commonjs' --sourceMap --outDir $(@D) $<
 ifeq (${TS-DECLARE},true)
 	${call show-msg,Creating declaration for $< => $(@D)/$(*F).d.ts}
-	@${TIME} tsc --declaration --lib 'ES2015' --module 'commonjs' --outDir $(@D) $<
+	@${TIME} tsc --declaration --lib 'ES2015' --lib 'ES6' --lib 'ES2016' --lib 'ES2017' --lib 'ES2018' --module 'commonjs' --outDir $(@D) $<
 endif
 
 watch:##@ts-mk Wtahc the directory defined in the tsconfig.json file
