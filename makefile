@@ -23,7 +23,7 @@ publish: publish-npm## Publish this to the current
 
 
 release:## Release a version of the system to NPM. This will version up the patch number and go from there
-	${MAKE} -e VERSION-TYPE=patch -e VERSION-SUFFIX= version-up clean build publish
+	@${MAKE} -e VERSION-TYPE=patch -e VERSION-SUFFIX= version-up clean build publish
 
 release-prod:## Release a production version of the system to NPM. This will version up the minor numberm build and then publish
-	${MAKE} -e BUILD_TYPE=prod -e VERSION-TYPE=minor -e VERSION-SUFFIX= version-up clean build publish
+	@${MAKE} -e BUILD_TYPE=prod -e VERSION-TYPE=minor -e VERSION-SUFFIX= version-up clean build publish
