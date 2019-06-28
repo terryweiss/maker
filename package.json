@@ -1,12 +1,16 @@
 {
   "name": "@concorde2k/core.makes",
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Makefile snippets",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Concorde, Inc",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:concorde2000/core.make.git"
+  },
   "license": "NONE",
   "dependencies": {},
   "devDependencies": {
