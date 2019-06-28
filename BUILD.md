@@ -108,6 +108,15 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Description | Tools for working with the npm repository
 | publish-npm | This will call npm publish
 
+## File: options:
+
+| Var/Verb | Description  |
+|---|---|
+| build | Create the dist directory and copy the files into it
+| publish | Publish this to the current
+| release | Release a version of the system to NPM. This will version up the patch number and go from there
+| release-prod | Release a production version of the system to NPM. This will version up the minor numberm build and then publish
+
 ## File: project-mk:
 
 | Var/Verb | Description  |
