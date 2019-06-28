@@ -19,7 +19,7 @@ BUILD-DESCRIPTION ?= BUILD.md ##@make-docs-mk: A markdown file to be included in
 # A category can be added with @category
 HELP_RENDER = \
     %help; \
-    while(<>) { push @{$$help{$$2 // 'options'}}, [$$1, $$3] if /^([a-zA-Z\-\_]+)\s*:?.*\#\#(?:@([a-zA-Z\-\_]+))?\s(.*)$$/ }; \
+    while(<>) { push @{$$help{$$2 // '00-This-Project'}}, [$$1, $$3] if /^([a-zA-Z\-\_]+)\s*:?.*\#\#(?:@([a-zA-Z\-\_]+))?\s(.*)$$/ }; \
     print "usage: make [target]\n\n"; \
     for (sort keys %help) { \
     print "${HELP-SUNDERLINE}${HELP-CATEGORY}$$_:${HELP-RESET}${HELP-EUNDERLINE}\n"; \

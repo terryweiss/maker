@@ -10,7 +10,7 @@ VERSION-TYPE ?= preminor##@project-mk The version type speficies what portion of
 VERSION-SUFFIX ?= prod##@project-mk The string that gets appended to the version (0.0.0-XXXX.0)
 else
 ifeq (${BUILD_TYPE},stage)
-VERSION-TYPE ?= prepatch
+VERSION-TYPE ?= prerelease
 VERSION-SUFFIX ?= stage
 else
 VERSION-TYPE ?= prerelease
