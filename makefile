@@ -14,7 +14,6 @@ include ${LIBDIR}/npm.mk
 include ${LIBDIR}/static.mk
 include ${LIBDIR}/tsdocs.mk
 
-
 build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}
 	${call LoadCurrentVersion}
 	@-${GIT} add .
@@ -23,4 +22,5 @@ build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}
 publish: publish-npm
 
 
-release: version-up clean build publish
+release:
+	${MAKE} -e VERSION-TYPE=minor -e VERSION-SUFFIX= version-up clean build publish
