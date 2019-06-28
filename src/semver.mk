@@ -5,7 +5,7 @@ Description.SEMVER-MK:=##@semver-mk This file contains some helpers for defining
 PUSH-ON-VERSION:=false##@semver-mk When true, the repo will be automatically pushed on version increment
 
 define LoadCurrentVersion##@semver-mk Call this function to create the CURRENT-VERSION variable which will contain the current instance version from package.json
-$(eval CURRENT-VERSION=$(shell node -p "require('./${PACKAGEJSON-FILE}').version"))
+$(eval CURRENT-VERSION?=$(shell node -p "require('./${PACKAGEJSON-FILE}').version"))
 endef
 
 version-up:fix-line-endings ##@semver-mk This is the recipe to up the version number. Set the variables as necessary and run this.
@@ -15,6 +15,7 @@ version-up:fix-line-endings ##@semver-mk This is the recipe to up the version nu
 		let fs = require('fs'); \
 		fs.writeFileSync('./${PACKAGEJSON-FILE}', JSON.stringify(v, null, 2)); \
 		v.version;"))
+	$(eval CURRENT-VERSION=${NEW_VERSION})
 	$(call show-msg,Updated to ${NEW_VERSION})
 	$(call show-msg,Committing changes)
 	@${GIT} add .
