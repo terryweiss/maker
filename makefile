@@ -14,7 +14,7 @@ include ${LIBDIR}/npm.mk
 include ${LIBDIR}/static.mk
 include ${LIBDIR}/tsdocs.mk
 
-build: ./${BUILD-DESCRIPTION} ${SOURCE-STATIC-FILES-OUT}## Create the dist directory and copy the files into it
+build: ${BUILD-DESCRIPTION-OUT} ${SOURCE-STATIC-FILES-OUT}## Create the dist directory and copy the files into it
 
 
 publish: publish-npm## Publish this to the current

@@ -24,6 +24,7 @@ LIB ?= node_modules##@project-mk The location of the node_modules directory. Use
 PACKAGEJSON-OUT = ${OUT-DIR}/${PACKAGEJSON-FILE}##@project-mk The build target for package.json. Use this var to specify your build depdency
 README-FILE ?= README.md##@project-mk The name of your readme file
 README-FILE-OUT = ${OUT-DIR}/${README-FILE}##@project-mk The build target for the readme file. Use this var to specify your build depdency
+BUILD-DESCRIPTION-OUT = ${OUT-DIR}/${BUILD-DESCRIPTION}
 ALL-PROJECT-FILES = $(shell find . -not \( -path ./node_modules -prune \) -not \( -path ./docs -prune \) -not \( -path ./.idea -prune \) -not \( -path ./.git -prune \) -type f -name "*")
 
 ${LIB}: ${PACKAGEJSON-FILE}
@@ -33,6 +34,10 @@ ${LIB}: ${PACKAGEJSON-FILE}
 	@${TIME} ${NPM} audit fix
 	@${TOUCH} -m ${LIB}
 	${call end-msg,Installing dependencies}
+
+${BUILD-DESCRIPTION-OUT}: ${BUILD-DESCRIPTION}
+	${call show-msg,Copying ${BUILD-DESCRIPTION} => ${BUILD-DESCRIPTION-OUT}}
+	@${COPY} ${BUILD-DESCRIPTION} ${BUILD-DESCRIPTION-OUT}
 
 ${PACKAGEJSON-OUT}: ${PACKAGEJSON-FILE}
 	${call show-msg,Copying ${PACKAGEJSON-FILE} => ${OUT-DIR}/${PACKAGEJSON-FILE}}
