@@ -18,4 +18,7 @@ endif
 	@${TOUCH} -m ${MD-DOCS-DIR}
 	@${TOUCH} -m ${HTML-DOCS-DIR}
 
-clean-docs:
+
+clean::
+	${call show-msg,Cleaning ${DOCS-OUT}}
+	@${RMDIR} ${DOCS-OUT}*

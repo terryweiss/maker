@@ -2,13 +2,10 @@
 
 Description.CLEAN-MK:=##@clean-mk Recipes for cleaning up after yourself
 
-clean:##@clean-mk Clean up the out dir by deleting everything in it
+clean::##@clean-mk Clean up the out dir by deleting everything in it
 	${call show-msg,Cleaning ${OUT-DIR}}
 	@${TIME} ${RMDIR} ${OUT-DIR}/*
-ifneq (${DOCS-OUT},)
-	${call show-msg,Cleaning ${DOCS-OUT}}
-	@${RMDIR} ${DOCS-OUT}*
-endif
+
 
 clean-all: dist-clean##@clean-mk Alias for dist-clean
 
