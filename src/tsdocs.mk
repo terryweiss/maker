@@ -17,3 +17,5 @@ endif
 	@${TOUCH} -m ${DOCS-OUT}
 	@${TOUCH} -m ${MD-DOCS-DIR}
 	@${TOUCH} -m ${HTML-DOCS-DIR}
+
+clean-docs:
