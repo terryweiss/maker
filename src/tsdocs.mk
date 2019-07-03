@@ -6,13 +6,13 @@ HTML-DOCS-DIR ?= ${DOCS-OUT}/html##@tsdocs-mk The directory where to place HTML 
 MD-DOCS-DIR ?= ${DOCS-OUT}/md##@tsdocs-mk The directory where to place markdown documentation. If blank, it will not be generated
 
 ${DOCS-OUT}: ${SOURCE-TS-FILES} makefile ${README-FILE} ${PACKAGEJSON-FILE} ${TYPEDOC-CONFIG-FILE} ${BUILD-DESCRIPTION-OUT}
-ifneq (HTML-DOCS-DIR,)
+ifneq (${HTML-DOCS-DIR},)
 	@${TIME} ${TSDOCS} --out ${HTML-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --includes ./  ${SRC-DIR}
 endif
-ifneq (MD-DOCS-DIR,)
+ifneq (${MD-DOCS-DIR},)
 	@${TIME} ${TSDOCS} --out ${MD-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --theme markdown --mdEngine gitbook --includes ./ ${SRC-DIR}
 endif
-	${call show-msg,Copying ${BUILD-DESCRIPTION} ${MD-DOCS-DIR}
+	${call show-msg,Copying ${BUILD-DESCRIPTION} ${MD-DOCS-DIR}}
 	@${COPY} ${BUILD-DESCRIPTION} ${MD-DOCS-DIR}
 	@${TOUCH} -m ${DOCS-OUT}
 	@${TOUCH} -m ${MD-DOCS-DIR}
