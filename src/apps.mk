@@ -8,7 +8,7 @@ MKDIRP ?= mkdir -p##@apps-mk The beloved `mkdir -p`
 COPY ?= cp##@apps-mk Copy command
 TOUCH ?= touch##@apps-mk Touch command
 TSC ?= tsc --lib 'ES2015' --module 'commonjs'##@apps-mk The TypeScript compiler specifying the module system and the source library
-DOCKER ?= docker##@apps-mk The docker CLI executable 
+DOCKER ?= docker##@apps-mk The docker CLI executable
 PERL ?= perl##@apps-mk PERL is used to generate these docs
 JSM ?= jsm##@apps-mk The Javascript Module Schema package
 GIT ?= git##@apps-mk GIT cli
@@ -24,5 +24,5 @@ REPORT-TIME ?= false##@apps-mk When running some compilations, the system will c
 ifeq (${REPORT-TIME},true)
 TIME ?= time##@apps-mk Long running tasks will be `time`d to track performance if REPORT-TIME is true
 else
-TIME := 
+TIME :=
 endif
