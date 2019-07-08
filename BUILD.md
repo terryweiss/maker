@@ -1,4 +1,4 @@
-make[1]: Entering directory '/mnt/e/workspace/makes'
+make[2]: Entering directory '/mnt/e/workspace/makes'
 # Building
 This project is built using [GNU make](https://www.gnu.org/software/make/manual/html_node/index.html). Get it from the usual channels. The `makefile` included here provides the following verbs:
 ## File: api-mk:
@@ -23,7 +23,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | COPY | Copy command
 | TOUCH | Touch command
 | TSC | The TypeScript compiler specifying the module system and the source library
-| DOCKER | The docker CLI executable 
+| DOCKER | The docker CLI executable
 | PERL | PERL is used to generate these docs
 | JSM | The Javascript Module Schema package
 | GIT | GIT cli
@@ -82,7 +82,6 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Var/Verb | Description  |
 |---|---|
 | Description | Recipes for compiling javascript via babel
-| JS-OUT | Add this to your build dependencies
 
 ## File: make-docs-mk:
 
@@ -171,4 +170,4 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | HTML-DOCS-DIR | The directory where to place HTML documentation. If blank, it will not be generated
 | MD-DOCS-DIR | The directory where to place markdown documentation. If blank, it will not be generated
 
-make[1]: Leaving directory '/mnt/e/workspace/makes'
+make[2]: Leaving directory '/mnt/e/workspace/makes'
