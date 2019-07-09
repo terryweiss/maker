@@ -1,6 +1,6 @@
 {
   "name": "@concorde2k/core.makes",
-  "version": "1.8.11",
+  "version": "1.8.12",
   "description": "Makefile snippets",
   "main": "",
   "scripts": {
@@ -14,11 +14,11 @@
   "license": "NONE",
   "dependencies": {},
   "devDependencies": {
-    "semver": "^6.1.2",
-    "tap": "^14.3.1",
+    "semver": "^6.2.0",
+    "tap": "^14.4.1",
     "typedoc": "^0.14.2",
     "typedoc-clarity-theme": "^1.1.0",
-    "typedoc-plugin-markdown": "^2.0.6",
-    "typescript": "^3.5.2"
+    "typedoc-plugin-markdown": "^2.0.8",
+    "typescript": "^3.5.3"
   }
 }
