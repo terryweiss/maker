@@ -61,6 +61,10 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | build-container | Build a docker container
 | publish-container | Publish a container to the docker repo
 | deploy-dc | Deploys your docker-compose file to the server you specify. Set DOCKER-DC-<build type>-SERVER and BUILD_TYPE and go for it
+| stop-all-containers | Stops all running containers
+| delete-all-containers | Deletes all containers
+| delete-all-images | Deletes all docker images
+| reset-docker | Deletes all containers and images, effectively resetting your local docker environment
 
 ## File: ejsfile-mk:
 

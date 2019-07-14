@@ -50,3 +50,16 @@ else
 	@${SSH} -t ${DOCKER-DC-DEV-SERVER} ${SED} -i -e s/{{version}}/${THIS_VERSION}/ /etc/concorde/docker-compose.yaml
 endif
 endif
+
+stop-all-containers:##@docker-mk Stops all running containers
+	docker stop $$(docker ps -aq)
+
+delete-all-containers:##@docker-mk Deletes all containers
+	docker rm $$(docker ps -aq)
+
+delete-all-images:##@docker-mk Deletes all docker images
+	docker rmi $$(docker images -q)
+
+reset-docker:stop-all-containers delete-all-containers delete-all-images##@docker-mk Deletes all containers and images, effectively resetting your local docker environment
+
+

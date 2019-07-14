@@ -6,7 +6,7 @@ SRC-DIR ?= src##@project-mk Where to find source files
 BUILD_TYPE ?= dev##@project-mk Can be one of dev, prod, or stage. It is used to deploy artifacts (the ones that use it are locally documented) and to name a version number
 
 ifeq (${BUILD_TYPE},prod)
-VERSION-TYPE ?= minor##@project-mk The version type speficies what portion of the build number will be incremented. Standard choices are `preminor` for prod (0.X.0), `prepatch` for staging (0.0.X) and `prelease` for dev (0.0.0-dev.X)
+VERSION-TYPE ?= patch##@project-mk The version type speficies what portion of the build number will be incremented. Standard choices are `preminor` for prod (0.X.0), `prepatch` for staging (0.0.X) and `prelease` for dev (0.0.0-dev.X)
 VERSION-SUFFIX ?= prod##@project-mk The string that gets appended to the version (0.0.0-XXXX.0)
 else
 ifeq (${BUILD_TYPE},stage)
