@@ -160,8 +160,9 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Var/Verb | Description  |
 |---|---|
 | Description | Recipes for compiling typescript
-| BUILD-TS | Use this to define a build dependency
+| COMPILE-TS | Use this to define a build dependency using make's file algorithms
 | TS-DECLARE | When true, a declaration file will be generated for each module
+| BUILD-TS | Use this to use the tsconfig files to build the directory
 | watch | Wtahc the directory defined in the tsconfig.json file
 
 ## File: tsdocs-mk:
