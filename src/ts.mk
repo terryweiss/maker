@@ -23,7 +23,7 @@ ifeq (${TS-DECLARE},true)
 endif
 
 tscompiler:
-	${TSC}
+	@${TSC}
 
 watch:##@ts-mk Wtahc the directory defined in the tsconfig.json file
 	@${TSC} --watch
