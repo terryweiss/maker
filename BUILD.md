@@ -1,4 +1,4 @@
-make[3]: Entering directory '/mnt/e/workspace/makes'
+make[2]: Entering directory '/mnt/e/workspace/makes'
 # Building
 This project is built using [GNU make](https://www.gnu.org/software/make/manual/html_node/index.html). Get it from the usual channels. The `makefile` included here provides the following verbs:
 ## File: api-mk:
@@ -33,6 +33,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | SED | sed - mostly used when applying the current version to the docker-compose remotely
 | BABEL | Bable for compiling ES(X) code to JS
 | TSDOCS | The path to the typedoc executable
+| JSM | The json schema model generator
 | REPORT-TIME | When running some compilations, the system will call the `time` program when running to see what is going on. This must be `true` for that to happen
 | TIME | Long running tasks will be `time`d to track performance if REPORT-TIME is true
 
@@ -73,7 +74,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Description | Got some ejs or other template files you want to accompany your code? This is the right place.
 | EJS-TEMPLATES-DIR | The directory under the src directory where we will find the templates
 | EJS-EXTENSION | So maybe you want to use another templting system? Set the extension here.
-| EJS-OUT | This is the full output, use this ariable in your build dependencies
+| EJS-FILES-OUT | This is the full output, use this variable in your build dependencies
 
 ## File: info-mk:
 
@@ -86,6 +87,16 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Var/Verb | Description  |
 |---|---|
 | Description | Recipes for compiling javascript via babel
+
+## File: jsm-mk:
+
+| Var/Verb | Description  |
+|---|---|
+| MODEL-DIR | Where to find the schema files
+| MODEL-EXT | The extenion of your schema files
+| MODEL-OUT-DIR | Where to put output
+| MODEL-OUT | This is the output pattern
+| gen-models | This is the dependency for the build recipe
 
 ## File: make-docs-mk:
 
@@ -175,4 +186,4 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | HTML-DOCS-DIR | The directory where to place HTML documentation. If blank, it will not be generated
 | MD-DOCS-DIR | The directory where to place markdown documentation. If blank, it will not be generated
 
-make[3]: Leaving directory '/mnt/e/workspace/makes'
+make[2]: Leaving directory '/mnt/e/workspace/makes'

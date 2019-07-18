@@ -13,6 +13,7 @@ include ${LIBDIR}/js.mk
 include ${LIBDIR}/npm.mk
 include ${LIBDIR}/static.mk
 include ${LIBDIR}/tsdocs.mk
+include ${LIBDIR}/jsm.mk
 
 build: ${BUILD-DESCRIPTION-OUT} ${SOURCE-STATIC-FILES-OUT}## Create the dist directory and copy the files into it
 
