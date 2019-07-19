@@ -12,7 +12,5 @@ MODEL-OUT ?= ${MODEL-OUT-DIR}/%.ts##@jsm-mk This is the output pattern
 gen-models: ${MODEL-OUT}##@jsm-mk This is the dependency for the build recipe
 
 ${MODEL-OUT}:
-	jsm --log-level=trace -f "${MODEL-DIR}/*.${MODEL-EXT}" -o ${MODEL-OUT-DIR}
-	$(MAKE) build
-
-
+	${JSM} --log-level=trace -i "${MODEL-DIR}/**.${MODEL-EXT}" -o ${MODEL-OUT-DIR}
+	-$(MAKE) BUILD-TS
