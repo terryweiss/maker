@@ -1,6 +1,6 @@
 {
   "name": "@concorde2k/core.makes",
-  "version": "1.9.8",
+  "version": "1.9.9",
   "description": "Makefile snippets",
   "main": "",
   "scripts": {
