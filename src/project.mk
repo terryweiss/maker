@@ -48,8 +48,8 @@ ${README-FILE-OUT}: ${README-FILE}
 	@${COPY} ${README-FILE} ${OUT-DIR}/${README-FILE}
 
 install-dev-env:##@project-mk Installs the development environment for you
-	@${TIME} ${NPM} add --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
-	@${TIME} ${NPM} audit fix
+	-@${TIME} ${NPM} add --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
+	-@${TIME} ${NPM} audit fix
 
 fix-line-endings:
 	$(call show-msg,Fixing line endings)
