@@ -29,9 +29,9 @@ ALL-PROJECT-FILES = $(shell find . -not \( -path ./node_modules -prune \) -not \
 
 ${LIB}: ${PACKAGEJSON-FILE}
 	${call start-msg,Installing dependencies}
-	@${TIME} ${NPM} install
+	-@${TIME} ${NPM} install
 	${call show-msg,Applying NPM audit}
-	@${TIME} ${NPM} audit fix
+	-@${TIME} ${NPM} audit fix
 	@${TOUCH} -m ${LIB}
 	${call end-msg,Installing dependencies}
 
