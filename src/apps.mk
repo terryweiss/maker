@@ -2,6 +2,7 @@ Description.APP-MK:=##@apps-mk These are the global commands the make system und
 
 FIND ?= /usr/bin/find##@apps-mk Be careful with this one if you are in windows. It expects linux `find` not CMD `find` and you may need to update the path to your local cygwin instance
 NPM ?= yarn##@apps-mk NPM executable
+NPM-PUBLIC ?= npm##@apps-mk Alwaays returns pure npm for publishing to the npm registry
 RM ?= rm##@apps-mk The delete command
 MKDIR ?= mkdir##@apps-mk The command to make directories
 MKDIRP ?= mkdir -p##@apps-mk The beloved `mkdir -p`
