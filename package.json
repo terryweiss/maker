@@ -1,6 +1,6 @@
 {
   "name": "@terryweiss/maker",
-  "version": "1.9.22",
+  "version": "1.9.23",
   "description": "Makefile snippets",
   "main": "",
   "scripts": {
@@ -18,7 +18,7 @@
     "tap": "^14.6.1",
     "typedoc": "^0.15.0",
     "typedoc-clarity-theme": "^1.1.0",
-    "typedoc-plugin-markdown": "^2.1.1",
+    "typedoc-plugin-markdown": "^2.1.11",
     "typescript": "^3.5.3"
   }
 }
