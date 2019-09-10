@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="efc7722e-25ed-4b80-b7a9-7bef58aef763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/semver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/range.bnf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/semver/semver.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tsdocs.mk" beforeDir="false" afterPath="$PROJECT_DIR$/src/tsdocs.mk" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +102,8 @@
       <workItem from="1564330964035" duration="781000" />
       <workItem from="1565389317608" duration="2871000" />
       <workItem from="1566234661883" duration="473000" />
-      <workItem from="1568132638621" duration="48000" />
+      <workItem from="1568132638621" duration="333000" />
+      <workItem from="1568134303499" duration="772000" />
     </task>
     <task id="LOCAL-00001" summary="Updated readme">
       <created>1561393892136</created>
@@ -144,7 +137,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
