@@ -29,9 +29,9 @@ ALL-PROJECT-FILES = $(shell find . -not \( -path ./node_modules -prune \) -not \
 
 ${LIB}: ${PACKAGEJSON-FILE}
 	${call start-msg,Installing dependencies}
-	@${TIME} ${NPM} install
+	-@${TIME} ${NPM} install
 	${call show-msg,Applying NPM audit}
-	@${TIME} ${NPM} audit fix
+	-@${TIME} ${NPM} audit fix
 	@${TOUCH} -m ${LIB}
 	${call end-msg,Installing dependencies}
 
@@ -48,8 +48,8 @@ ${README-FILE-OUT}: ${README-FILE}
 	@${COPY} ${README-FILE} ${OUT-DIR}/${README-FILE}
 
 install-dev-env:##@project-mk Installs the development environment for you
-	@${TIME} ${NPM} install --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
-	@${TIME} ${NPM} audit fix
+	-@${TIME} ${NPM} add --save-dev typescript typedoc typedoc-plugin-markdown semver tap typedoc-clarity-theme
+	-@${TIME} ${NPM} audit fix
 
 fix-line-endings:
 	$(call show-msg,Fixing line endings)

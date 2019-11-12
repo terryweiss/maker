@@ -10,7 +10,7 @@ ifneq (${HTML-DOCS-DIR},)
 	@${TIME} ${TSDOCS} --out ${HTML-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --includes ./  ${SRC-DIR}
 endif
 ifneq (${MD-DOCS-DIR},)
-	@${TIME} ${TSDOCS} --out ${MD-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --theme markdown --mdEngine gitbook --includes ./ ${SRC-DIR}
+	@${TIME} ${TSDOCS} --out ${MD-DOCS-DIR} --options ${TYPEDOC-CONFIG-FILE} --theme markdown --includes ./ ${SRC-DIR}
 endif
 	${call show-msg,Copying ${BUILD-DESCRIPTION} ${MD-DOCS-DIR}}
 	@${COPY} ${BUILD-DESCRIPTION} ${MD-DOCS-DIR}

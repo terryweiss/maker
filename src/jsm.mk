@@ -9,8 +9,12 @@ MODEL-FILES-OUT := $(subst ${MODEL-DIR}/,${MODEL-OUT-DIR}/,${MODEL-FILES-OUT})
 MODEL-SRC ?= ${MODEL-DIR}/%.${MODEL-EXT}
 MODEL-OUT ?= ${MODEL-OUT-DIR}/%.ts##@jsm-mk This is the output pattern
 
-gen-models: ${MODEL-OUT}##@jsm-mk This is the dependency for the build recipe
+#gen-models: ${MODEL-OUT}##@jsm-mk This is the dependency for the build recipe
+#
+#${MODEL-OUT}:
+#	jsm --log-level=trace -f "${MODEL-DIR}/*.${MODEL-EXT}" -o ${MODEL-OUT-DIR}
+#	$(MAKE) build
 
-${MODEL-OUT}:
-	${JSM} --log-level=trace -i "${MODEL-DIR}/**.${MODEL-EXT}" -o ${MODEL-OUT-DIR}
-	-$(MAKE) BUILD-TS
+
+gen-models:##@jsm-mk This is the dependency for the build recipe
+	jsm --log-level=trace -i "${MODEL-DIR}/**.${MODEL-EXT}" -o ${MODEL-OUT-DIR}

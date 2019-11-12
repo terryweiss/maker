@@ -1,4 +1,4 @@
-make[2]: Entering directory '/mnt/e/workspace/makes'
+make[2]: Entering directory '/mnt/c/workspace/makes'
 # Building
 This project is built using [GNU make](https://www.gnu.org/software/make/manual/html_node/index.html). Get it from the usual channels. The `makefile` included here provides the following verbs:
 ## File: api-mk:
@@ -17,6 +17,7 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | Description | These are the global commands the make system understands. These are all overrideable, so if for instance you want to use `yarn` instead of `npm`, you can overide `NPM=yarm` and et viola.
 | FIND | Be careful with this one if you are in windows. It expects linux `find` not CMD `find` and you may need to update the path to your local cygwin instance
 | NPM | NPM executable
+| NPM-PUBLIC | Alwaays returns pure npm for publishing to the npm registry
 | RM | The delete command
 | MKDIR | The command to make directories
 | MKDIRP | The beloved `mkdir -p`
@@ -186,4 +187,4 @@ This project is built using [GNU make](https://www.gnu.org/software/make/manual/
 | HTML-DOCS-DIR | The directory where to place HTML documentation. If blank, it will not be generated
 | MD-DOCS-DIR | The directory where to place markdown documentation. If blank, it will not be generated
 
-make[2]: Leaving directory '/mnt/e/workspace/makes'
+make[2]: Leaving directory '/mnt/c/workspace/makes'
