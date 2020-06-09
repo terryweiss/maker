@@ -1,7 +1,7 @@
 .PHONY: build-container publish-container deploy-dc
 Description.DOCKER-MK:=##@docker-mk Recipes for dealing with docker containers and publications
 
-DOCKER-REGISTRY-URL ?= registry.concorde2000.com:5000##@docker-mk This is the name of the docker repository to publish containers to
+DOCKER-REGISTRY-URL ?= registry.wherever.com:5000##@docker-mk This is the name of the docker repository to publish containers to
 DOCKER-NAME ?= iAmNotARrepo##@docker-mk This is the name of the container that is being published.
 DOCKER-PUBLISH-LATEST ?= false##@docker-mk Should the docker container also get the "latest" tag? This can be helpful when setting up a container that is being tested or evaluated before being committed to
 DOCKER-FILE ?= .##@docker-mk The path to the docker file
@@ -54,12 +54,25 @@ endif
 stop-all-containers:##@docker-mk Stops all running containers
 	docker stop $$(docker ps -aq)
 
-delete-all-containers:##@docker-mk Deletes all containers
+remove-all-containers:##@docker-mk Deletes all containers
 	docker rm $$(docker ps -aq)
 
-delete-all-images:##@docker-mk Deletes all docker images
+remove-all-images:##@docker-mk Deletes all docker images
 	docker rmi $$(docker images -q)
 
 reset-docker:stop-all-containers delete-all-containers delete-all-images##@docker-mk Deletes all containers and images, effectively resetting your local docker environment
 
+dc-start:##@docker-mk docker-compose up -d
+	${DC} up -d ${IMG}
 
+dc-stop:##@docker-mk docker-compose stop
+	${DC} stop ${IMG}
+
+dc-logs:##@docker-mk docker-compose logs
+	${DC} logs -f --tail=300 ${IMG}
+
+dc-restart:##@docker-mk docker-compose restart
+	${DC} restart ${IMG}
+
+dc-build:##@docker-mk docker-compose build
+	${DC} build ${IMG}

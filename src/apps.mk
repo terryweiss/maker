@@ -20,6 +20,7 @@ SED ?= sed##@apps-mk sed - mostly used when applying the current version to the 
 BABEL ?= babel##@apps-mk Bable for compiling ES(X) code to JS
 TSDOCS ?= node_modules/.bin/typedoc ##@apps-mk The path to the typedoc executable
 JSM ?= jsm##@apps-mk The json schema model generator
+DC ?= docker-compose
 
 REPORT-TIME ?= false##@apps-mk When running some compilations, the system will call the `time` program when running to see what is going on. This must be `true` for that to happen
 
